@@ -1,10 +1,10 @@
 <template>
   <div class="container">
-    <h1
-      class="flex justify-center items-center h-screen space-x-10 px-18 font-bold text-4xl mb-2 justify-center items-center"
-    >
+    
+    <h3
+      class="flex justify-center items-center h-screen space-x-5 px-18 font-bold text-4xl justify-center items-center">
       Autoplay video with Intersection Observer in Nuxt.js
-    </h1>
+    </h3>
 
     <div class="flex justify-center items-center h-screen space-x-10">
       <div class="rounded overflow-hidden shadow-lg mb-4 content-center">
@@ -14,7 +14,6 @@
           <video
             id="video-player"
             controls
-            muted
             width="800px"
             class="width-full"
             ref="theVideo"
@@ -31,7 +30,7 @@ export default {
     return {
       cld: null,
       player: null,
-      video: "samples/animals/testvid",
+      video: "/samples/animals/dancing-cat",
       observer: null,
     };
   },
@@ -44,7 +43,7 @@ export default {
 
     this.player = this.cld.videoPlayer("video-player", {
       analytics: {
-        events: ["ended", "play", "pause", "start"],
+        events: ["play", "pause"],
       },
     });
 
@@ -59,6 +58,8 @@ export default {
         entries.forEach((entry) => {
           if (entry.intersectionRatio > 0) {
             this.player.play();
+          } else {
+            this.player.pause();
           }
         });
       });
