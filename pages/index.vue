@@ -1,10 +1,11 @@
 <template>
   <div class="container">
-    
-    <h3
-      class="flex justify-center items-center h-screen space-x-5 px-18 font-bold text-4xl justify-center items-center">
+    <h2
+      class="flex justify-center items-center h-screen space-x-5 px-18 font-bold text-4xl"
+    >
       Autoplay video with Intersection Observer in Nuxt.js
-    </h3>
+    </h2>
+    <p>scroll down to autoplay the video</p>
 
     <div class="flex justify-center items-center h-screen space-x-10">
       <div class="rounded overflow-hidden shadow-lg mb-4 content-center">
