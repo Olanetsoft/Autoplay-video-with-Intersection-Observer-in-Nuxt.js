@@ -32,7 +32,7 @@ export default {
       cld: null,
       player: null,
       video: "/samples/animals/dancing-cat",
-      observer: null,
+      // observer: null,
     };
   },
 
