@@ -17,6 +17,7 @@
             width="800px"
             class="width-full"
             ref="theVideo"
+            muted
           ></video>
         </div>
       </div>
